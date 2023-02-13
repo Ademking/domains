@@ -1,0 +1,6 @@
+# Binaries
+*.exe
+*.exe~
+*.test
+*.out
+domains
