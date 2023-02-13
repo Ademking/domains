@@ -9,7 +9,7 @@
 To install `domains`, you must have Go installed on your system. Then, run the following command:
 
 ```
-go get github.com/Ademking/domains
+go install github.com/Ademking/domains@latest
 ```
 
 This will download the package and its dependencies and build the domains binary, which you can run from the command line.
