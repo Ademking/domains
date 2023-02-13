@@ -9,15 +9,14 @@ import (
 	"strings"
 )
 
-func extract_domain(input string) string {
-	r, err := regexp.Compile(`([a-z0-9][a-z0-9\-]{0,61}[a-z0-9]\.)+[a-z0-9][a-z0-9\-]*[a-z0-9]`)
+func extract_domain(input string) []string {
+	r, err := regexp.Compile(`(?m)([a-z0-9][a-z0-9\-]{0,61}[a-z0-9]\.)+[a-z0-9][a-z0-9\-]*[a-z0-9]`)
 	if err != nil {
-		return ""
+		return []string{}
 	}
-	if r.MatchString(input) {
-		return r.FindString(input)
-	}
-	return ""
+	matchs := r.FindAllString(input, -1)
+	return matchs
+
 }
 
 func help() {
@@ -67,11 +66,13 @@ func main() {
 			if input == "" {
 				continue
 			}
-			domain := extract_domain(input)
-			if domain == "" {
+			domains_list := extract_domain(input)
+			if len(domains_list) == 0 {
 				continue
 			}
-			domains[domain] = true
+			for _, domain := range domains_list {
+				domains[domain] = true
+			}
 		}
 
 		for domain := range domains {
@@ -95,11 +96,13 @@ func main() {
 			if input == "" {
 				continue
 			}
-			domain := extract_domain(input)
-			if domain == "" {
+			domains_list := extract_domain(input)
+			if len(domains_list) == 0 {
 				continue
 			}
-			domains[domain] = true
+			for _, domain := range domains_list {
+				domains[domain] = true
+			}
 		}
 
 		for domain := range domains {

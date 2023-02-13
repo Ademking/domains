@@ -1,4 +1,11 @@
-www.google.com
-www.facebook.com
-www.github.com
-ww1.ww2.ww3.example.com
+142.251.39.115  200  www.noteable.spotify.com                   Google Frontend                            ghs.googlehosted.com
+142.251.39.115  200  www.newsroom.spotify.com                   Google Frontend                            ghs.googlehosted.com
+142.251.36.51   200  www.canvas.spotify.com                     Google Frontend                            ghs.googlehosted.com
+35.186.224.25   404  webplayersupport.spotify.com               envoy                                      edge-web.dual-gslb.spotify.com
+35.186.224.25   200  works.spotify.com                          envoy                                      edge-web.dual-gslb.spotify.com
+35.186.224.25   404  ws.spotify.com                             envoy                                      edge-web.dual-gslb.spotify.com
+35.186.224.25   503  wts.spotify.com                            envoy                                      edge-web.dual-gslb.spotify.com
+35.186.224.25   200  www.spotify.com                            envoy                                      edge-web.dual-gslb.spotify.com
+54.176.174.138  200  wl.spotify.com                             envoy                                      thirdparty.bnc.lt
+142.251.36.51   200  www.hrblog.spotify.com                     Google Frontend                            ghs.googlehosted.com
+35.186.224.25   200  yearinmusic.spotify.com                    envoy                                      edge-web.dual-gslb.spotify.com
