@@ -1,0 +1,4 @@
+www.google.com
+www.facebook.com
+www.github.com
+ww1.ww2.ww3.example.com
